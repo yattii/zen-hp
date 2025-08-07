@@ -9,8 +9,8 @@ const notoSerif = Noto_Serif_JP({
 });
 
 export const metadata = {
-  title: "名刺代わりのホームページ制作",
-  description: "中小飲食店向けの格安Webサイト制作",
+  title: "株式会社ZEN",
+  description: "名刺代わりのホームページ制作",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
