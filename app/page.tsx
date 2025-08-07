@@ -108,6 +108,9 @@ export default function Home() {
             <a href="#contact" className="hover:underline">
               問い合わせ
             </a>
+            <a href="#company" className="hover:underline">
+              会社概要
+            </a>
           </div>
 
           {/* モバイルボタン */}
@@ -173,6 +176,9 @@ export default function Home() {
               </a>
               <a href="#contact" className="block" onClick={handleLinkClick}>
                 問い合わせ
+              </a>
+              <a href="#company" className="block" onClick={handleLinkClick}>
+                会社概要
               </a>
             </motion.div>
           </motion.div>
@@ -531,6 +537,7 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
       </section>
+    
 
       {/* Contact セクション */}
       <section id="contact" className="py-20 px-6 bg-gray-100 text-center">
@@ -547,66 +554,102 @@ export default function Home() {
 
         {/* お問い合わせフォーム */}
         <form
-          ref={formRef}
-          onSubmit={sendEmail}
-          className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md text-left"
-        >
-          <label className="block mb-4">
-            <span className="text-gray-700 text-sm font-semibold">お名前</span>
-            <input
-              type="text"
-              name="name"
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
-            />
-          </label>
+  ref={formRef}
+  onSubmit={sendEmail}
+  className="w-full max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md text-left"
+>
+  <label className="block mb-4">
+    <span className="text-gray-700 text-sm font-semibold">お名前</span>
+    <input
+      type="text"
+      name="name"
+      required
+      className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
+    />
+  </label>
 
-          <label className="block mb-4">
-            <span className="text-gray-700 text-sm font-semibold">
-              メールアドレス
-            </span>
-            <input
-              type="email"
-              name="email"
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
-            />
-          </label>
+  <label className="block mb-4">
+    <span className="text-gray-700 text-sm font-semibold">メールアドレス</span>
+    <input
+      type="email"
+      name="email"
+      required
+      className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
+    />
+  </label>
 
-          <label className="block mb-4">
-            <span className="text-gray-700 text-sm font-semibold">件名</span>
-            <input
-              type="text"
-              name="subject"
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
-            />
-          </label>
+  <label className="block mb-4">
+    <span className="text-gray-700 text-sm font-semibold">件名</span>
+    <input
+      type="text"
+      name="subject"
+      required
+      className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
+    />
+  </label>
 
-          <label className="block mb-4">
-            <span className="text-gray-700 text-sm font-semibold">
-              お問い合わせ内容
-            </span>
-            <textarea
-              name="message"
-              rows={4}
-              required
-              className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
-            ></textarea>
-          </label>
+  <label className="block mb-4">
+    <span className="text-gray-700 text-sm font-semibold">お問い合わせ内容</span>
+    <textarea
+      name="message"
+      rows={4}
+      required
+      className="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
+    ></textarea>
+  </label>
 
-          <button
-            type="submit"
-            className="w-full bg-purple-600 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition"
-          >
-            送信する
-          </button>
+  <button
+    type="submit"
+    className="w-full bg-purple-600 text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition"
+  >
+    送信する
+  </button>
 
-          {status && (
-            <p className="text-sm text-center text-red-500 mt-4">{status}</p>
-          )}
-        </form>
+  {status && (
+    <p className="text-sm text-center text-red-500 mt-4">{status}</p>
+  )}
+</form>
+
       </section>
+
+      {/* Company セクション */}
+<section id="company" className="py-20 px-6 bg-white">
+  <h2 className="text-3xl font-bold mb-8 text-center">会社概要</h2>
+
+  <div className="max-w-2xl mx-auto bg-gray-50 p-6 shadow-md text-sm md:text-base">
+    <dl className="space-y-4">
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">会社名</dt>
+        <dd className="text-gray-900">株式会社ZEN</dd>
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">代表者</dt>
+        <dd className="text-gray-900">大舘 勇世</dd>
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">所在地</dt>
+        <dd className="text-gray-900">大阪府枚方市</dd>
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">メールアドレス</dt>
+        <dd className="text-gray-900">ooyayusei@gmail.com</dd>
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">設立</dt>
+        <dd className="text-gray-900">2025年</dd>
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-between">
+        <dt className="font-semibold text-gray-700">事業内容</dt>
+        <dd className="text-gray-900">
+          ホームページ制作、チラシ・ポスター作成、<br />
+          予約管理システム、シフト管理、SNS運用支援、<br />
+          キャッシュレス決済導入など（要相談）
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="py-10 px-6 bg-gray-50 text-sm text-gray-600">
@@ -633,6 +676,11 @@ export default function Home() {
               <li>
                 <a href="#contact" className="hover:underline">
                   お問い合わせ
+                </a>
+              </li>
+              <li>
+                <a href="#company" className="hover:underline">
+                  会社概要
                 </a>
               </li>
             </ul>
@@ -664,3 +712,7 @@ export default function Home() {
     </main>
   );
 }
+
+// git add .
+// git commit -m "Fix something"
+// git push
