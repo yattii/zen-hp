@@ -579,7 +579,7 @@ export default function Home() {
   </label>
 
   <label className="block mb-4">
-    <span className="text-gray-700 text-sm font-semibold">件名</span>
+    <span className="text-gray-700 text-sm font-semibold">会社名・屋号</span>
     <input
       type="text"
       name="subject"
