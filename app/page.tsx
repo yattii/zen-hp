@@ -273,7 +273,7 @@ export default function Home() {
           {[
             {
               title: "第一印象で信頼される",
-              text: "お客様は数秒で「良い店か」を判断。ホームページがあれば選ばれる確率が高まります。",
+              text: "お客様は数秒で「良い店か」を判断します。その際、ホームページの情報で選ばれる確率が高まります。",
               imageSrc: "/images/icon1.png",
             },
             {
@@ -283,7 +283,7 @@ export default function Home() {
             },
             {
               title: "「あるだけ」で違う",
-              text: "公式サイトがあるだけで、信頼・安心・問い合わせ率が向上します。",
+              text: "公式サイトがあるだけで、お客様の信頼・安心・問い合わせ率が向上します。",
               imageSrc: "/images/icon3.png",
             },
           ].map(({ title, text, imageSrc }, index) => (
